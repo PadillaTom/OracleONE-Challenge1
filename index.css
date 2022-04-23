@@ -230,3 +230,33 @@ body {
         margin-top: -5vh;
     }
 }
+
+@media screen and (min-width: 1350px){
+    /* Section */
+    .section{
+        display: flex;   
+        width: 82%;
+        margin: 0 auto;
+        height: 75vh;   
+        align-items: center;
+        justify-content: center;
+    }
+    .section-center{
+        height: 100%;
+        padding-right: 2rem;
+    }    
+    /* Textarea */
+    .single-textarea textarea {
+        height: 60vh;
+    }
+    /* Result */
+    .result-mobile{
+        display: none;
+    }
+    .result-desktop {
+        display: block;
+        height: 85vh;
+        width: 35%;
+        margin-top: -5vh;
+    }
+}

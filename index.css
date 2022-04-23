@@ -224,11 +224,17 @@ body {
         display: none;
     }
     .result-desktop {
-        display: block;
         height: 85vh;
         width: 50%;
         margin-top: -5vh;
+        display: grid;
+        place-items: center;
     }
+    .result-desktop-center img {
+        width: 90%;
+        margin: 2.5rem 0rem;
+    }
+   
 }
 
 @media screen and (min-width: 1350px){
@@ -249,14 +255,8 @@ body {
     .single-textarea textarea {
         height: 60vh;
     }
-    /* Result */
-    .result-mobile{
-        display: none;
-    }
+    /* Result */   
     .result-desktop {
-        display: block;
-        height: 85vh;
         width: 35%;
-        margin-top: -5vh;
     }
 }

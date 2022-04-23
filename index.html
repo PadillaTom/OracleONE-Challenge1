@@ -9,6 +9,40 @@
 		<title>ONE - Encriptador</title>
 	</head>
 	<body>
-		Proximamente... ENCRIPTADOR!
+		<!-- Nav -->
+		<nav class="navigation">
+			<div class="navigation-center">
+				<img src="./Assets/Logo.png" alt="Alura Logo" />
+			</div>
+		</nav>
+		<!-- Main -->
+		<main class="section">
+			<div class="section-center">
+				<!-- Input -->
+				<div class="single-textarea">
+					<textarea
+						name="texto"
+						id="texto"
+						cols="30"
+						rows="7"
+						placeholder="Ingrese el texto aqui"
+					></textarea>
+					<div class="validation-container">
+						<img src="./Assets/ValidationIcon.png" alt="" />
+						<span>Solo letras minúsculas y sin acentos.</span>
+					</div>
+				</div>
+				<!-- Buttons -->
+				<div class="buttons-container">
+					<button type="submit" class="btn btn-fill">Encriptar</button>
+					<button type="submit" class="btn btn-border">Desencriptar</button>
+				</div>
+				<!-- Result -->
+				<article class="result-container">
+					<h2>Ningún mensaje fue encontrado</h2>
+					<p>Ingresa el texto que desees encriptar o desencriptar</p>
+				</article>
+			</div>
+		</main>
 	</body>
 </html>

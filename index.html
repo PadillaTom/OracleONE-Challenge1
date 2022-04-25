@@ -22,7 +22,7 @@
 				<div class="single-textarea">
 					<textarea
 						name="texto"
-						id="texto"
+						id="userInput"
 						cols="30"
 						rows="7"
 						placeholder="Ingrese el texto aqui"
@@ -34,13 +34,19 @@
 				</div>
 				<!-- Buttons -->
 				<div class="buttons-container">
-					<button type="submit" class="btn btn-fill">Encriptar</button>
-					<button type="submit" class="btn btn-border">Desencriptar</button>
+					<button type="submit" id="btnEncriptado" class="btn btn-fill">
+						Encriptar
+					</button>
+					<button type="submit" id="btnDesencriptado" class="btn btn-border">
+						Desencriptar
+					</button>
 				</div>
 				<!-- Result MOBILE-TABLET -->
 				<article class="result-container result-mobile">
-					<h2>Ningún mensaje fue encontrado</h2>
-					<p>Ingresa el texto que desees encriptar o desencriptar</p>
+					<div class="img-container">
+						<h2>Ningún mensaje fue encontrado</h2>
+						<p>Ingresa el texto que desees encriptar o desencriptar</p>
+					</div>
 					<!-- Result Activo -->
 					<div class="result-display">
 						<p id="result-text" class="result-text">
@@ -71,4 +77,5 @@
 			</article>
 		</main>
 	</body>
+	<script type="text/javascript" src="./main.js"></script>
 </html>

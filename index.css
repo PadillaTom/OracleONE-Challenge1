@@ -124,7 +124,7 @@ body {
 }
 /* Result */
 .result-desktop {
-    display: none;
+    display: none; /* onChange */
 }
 .result-container{
     width: 95%;    
@@ -236,6 +236,9 @@ body {
     .result-desktop-center img {
         width: 90%;
         margin: 2.5rem 0rem;
+    }
+    .result-display button {
+        width: 15rem !important;
     }
    
 }

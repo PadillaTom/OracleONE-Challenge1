@@ -3,6 +3,7 @@ const userInput = document.querySelector("#userInput");
 const encriptBtn = document.querySelector("#btnEncriptado");
 const decriptBtn = document.querySelector("#btnDesencriptado");
 const imgContainer = document.querySelectorAll(".img-container");
+const validationContainer = document.querySelector(".validation-container");
 const resultDisplay = document.querySelectorAll(".result-display");
 const resultDisplayP = document.querySelectorAll(".result-display > p");
 const resultDisplayBtn = document.querySelectorAll(".result-display > button");
@@ -40,6 +41,11 @@ const remakeVowels = (myString) => {
 	return myString;
 };
 
+const validar = (myString) => {
+	const noPermitido = /[^a-z ]/;
+	return !noPermitido.test(myString);
+};
+
 // === Main Functions ===
 
 const encriptado = (e) => {
@@ -49,6 +55,13 @@ const encriptado = (e) => {
 	// Validations:
 	if (myInput.length <= 0) {
 		alert("Debes ingresar al menos una palabra");
+		return;
+	}
+	if (!validar(myInput)) {
+		validationContainer.lastElementChild.style.color = "crimson";
+		setTimeout(() => {
+			validationContainer.lastElementChild.style.color = "#AAB2D5";
+		}, 2500);
 		return;
 	}
 
@@ -72,6 +85,13 @@ const desencriptado = (e) => {
 	// Validations:
 	if (myInput.length <= 0) {
 		alert("Debes ingresar al menos una palabra");
+		return;
+	}
+	if (!validar(myInput)) {
+		validationContainer.lastElementChild.style.color = "crimson";
+		setTimeout(() => {
+			validationContainer.lastElementChild.style.color = "#AAB2D5";
+		}, 2500);
 		return;
 	}
 

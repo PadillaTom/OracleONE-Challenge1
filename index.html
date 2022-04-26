@@ -17,12 +17,12 @@
 		</nav>
 		<!-- Main -->
 		<main class="section">
-			<div class="section-center">
+			<form class="section-center">
 				<!-- Input -->
 				<div class="single-textarea">
 					<textarea
 						name="texto"
-						id="texto"
+						id="userInput"
 						cols="30"
 						rows="7"
 						placeholder="Ingrese el texto aqui"
@@ -34,39 +34,44 @@
 				</div>
 				<!-- Buttons -->
 				<div class="buttons-container">
-					<button type="submit" class="btn btn-fill">Encriptar</button>
-					<button type="submit" class="btn btn-border">Desencriptar</button>
+					<button type="submit" id="btnEncriptado" class="btn btn-fill">
+						Encriptar
+					</button>
+					<button type="submit" id="btnDesencriptado" class="btn btn-border">
+						Desencriptar
+					</button>
 				</div>
 				<!-- Result MOBILE-TABLET -->
 				<article class="result-container result-mobile">
-					<h2>Ningún mensaje fue encontrado</h2>
-					<p>Ingresa el texto que desees encriptar o desencriptar</p>
+					<div class="img-container">
+						<h2>Ningún mensaje fue encontrado</h2>
+						<p>Ingresa el texto que desees encriptar o desencriptar</p>
+					</div>
 					<!-- Result Activo -->
 					<div class="result-display">
-						<p id="result-text" class="result-text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-							quaerat, quas earum at molestias iste!
-						</p>
-						<button id="result-copy-btn" class="btn btn-border">Copiar</button>
+						<input  class="result-text"></input>
+						<button class="btn btn-border copyBtn">Copiar</button>
+						<h4 class="restartBtn">Reiniciar</h4>
 					</div>
 				</article>
-			</div>
+			</form>
 			<!-- Result MOBILE-TABLET -->
 			<article class="result-container result-desktop">
 				<div class="result-desktop-center">
-					<img src="./Assets/Muñeco.png" alt="Ningun Mensaje" />
-					<h2>Ningún mensaje fue encontrado</h2>
-					<p>Ingresa el texto que desees encriptar o desencriptar</p>
+					<div class="img-container">
+						<img src="./Assets/Muñeco.png" alt="Ningun Mensaje" />
+						<h2>Ningún mensaje fue encontrado</h2>
+						<p>Ingresa el texto que desees encriptar o desencriptar</p>
+					</div>
 					<!-- Result Activo -->
 					<div class="result-display">
-						<p id="result-text" class="result-text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-							quaerat, quas earum at molestias iste!
-						</p>
-						<button id="result-copy-btn" class="btn btn-border">Copiar</button>
+						<input class="result-text"></input>
+						<button class="btn btn-border copyBtn">Copiar</button>
+						<h4 class="restartBtn">Reiniciar</h4>
 					</div>
 				</div>
 			</article>
 		</main>
 	</body>
+	<script type="text/javascript" src="./main.js"></script>
 </html>

@@ -6,13 +6,16 @@ const imgContainer = document.querySelectorAll(".img-container");
 const resultDisplay = document.querySelectorAll(".result-display");
 const resultDisplayP = document.querySelectorAll(".result-display > p");
 const resultDisplayBtn = document.querySelectorAll(".result-display > button");
+const restartBtn = document.querySelectorAll(".restartBtn");
 
-// Letras
-const customA = "ai";
-const customE = "enter";
-const customI = "imes";
-const customO = "ober";
-const customU = "ufat";
+// Reemplazos:
+const encripter = {
+	a: "ai",
+	e: "enter",
+	i: "imes",
+	o: "ober",
+	u: "ufat",
+};
 const remaker = {
 	ai: "a",
 	enter: "e",
@@ -23,30 +26,10 @@ const remaker = {
 
 // Utils:
 const replaceVowels = (myString) => {
-	return myString
-		.map((char) => {
-			switch (char) {
-				case "a":
-					char = customA;
-					break;
-				case "e":
-					char = customE;
-					break;
-				case "i":
-					char = customI;
-					break;
-				case "o":
-					char = customO;
-					break;
-				case "u":
-					char = customU;
-					break;
-				default:
-					break;
-			}
-			return char;
-		})
-		.join("");
+	myString = myString.replace(/a|e|i|o|u/gi, function (matched) {
+		return encripter[matched];
+	});
+	return myString;
 };
 
 const remakeVowels = (myString) => {
@@ -59,13 +42,9 @@ const remakeVowels = (myString) => {
 // === Main Functions ===
 
 const encriptado = () => {
-	// Toma Value:
-	var myInput = userInput.value.split("");
-
-	// Encriptado:
+	var myInput = userInput.value;
 	let response = replaceVowels(myInput);
 
-	// Display Resultado:
 	imgContainer.forEach((i) => {
 		i.style.display = "none";
 	});
@@ -76,13 +55,9 @@ const encriptado = () => {
 };
 
 const desencriptado = () => {
-	// Toma Value:
 	let myInput = userInput.value;
-
-	// Desencriptado:
 	let response = remakeVowels(myInput);
 
-	// Display Resultado:
 	imgContainer.forEach((i) => {
 		i.style.display = "none";
 	});
@@ -92,6 +67,12 @@ const desencriptado = () => {
 	});
 };
 
+const clearBoard = () => {
+	window.location.reload();
+};
 // Events:
 encriptBtn.addEventListener("click", encriptado);
 decriptBtn.addEventListener("click", desencriptado);
+restartBtn.forEach((i) => {
+	i.addEventListener("click", clearBoard);
+});

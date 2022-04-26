@@ -16,9 +16,11 @@
     --color-gray-100:#CED4DA;
     --color-gray-200:#ADB5BD;
     --color-gray-300:#868E96;
-    --color-gray-400:#495057;
+    --color-gray-400:#495057;    
     --color-gray-500:#343A40;
-    
+    /* Transition */
+    --trans-02: 0.2s linear all;
+    --trans-03: 0.3s linear all;    
 }
 * {
     margin: 0;
@@ -112,15 +114,26 @@ body {
     letter-spacing: 2px;
     border-radius: 1.5rem;
     cursor: pointer;
+    transition: var(--trans-03);
 }
 .btn-fill {
     background: var(--color-blue-300);
+    border: 1px solid var(--color-blue-300);
     color: white;
+}
+.btn-fill:hover{
+    background: transparent;
+    color: var(--color-blue-300);
 }
 .btn-border {
     background: none;
     border: 1px solid var(--color-blue-300);
     color: var(--color-blue-300);
+}
+.btn-border:hover{
+    background: var(--color-blue-300);
+    border: 1px solid var(--color-blue-300);
+    color: white;
 }
 /* Result */
 .result-desktop {
@@ -159,6 +172,19 @@ body {
     color: var(--color-gray-400);
     font-size: 1.5rem !important;
     letter-spacing: 1.2px;
+}
+.result-display button {
+    margin-bottom: 1.2rem;
+}
+.result-display h4 {
+    color: lightgray;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: var(--trans-02)
+}
+.result-display h4:hover{
+    color: crimson;
 }
 
 /* Queries */

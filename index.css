@@ -172,6 +172,8 @@ body {
     color: var(--color-gray-400);
     font-size: 1.5rem !important;
     letter-spacing: 1.2px;
+    border: none;
+    outline: none;
 }
 .result-display button {
     margin-bottom: 1.2rem;
